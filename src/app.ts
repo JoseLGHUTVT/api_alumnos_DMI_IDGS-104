@@ -6,6 +6,7 @@ import { UserRepository } from "./repositories/userRepository";
 import { StudentRepository } from "./repositories/studentRepository";
 import { TokenRepository } from "./repositories/tokenRepository";
 import { AuthService } from "./services/authService";
+import { RefreshTokenRepository } from "./repositories/refreshTokenRepository";
 import { createAuthRouter } from "./routes/authRoutes";
 import { createStudentRouter } from "./routes/studentRoutes";
 import { errorHandler, notFoundHandler } from "./middleware/errorHandler";
@@ -19,7 +20,8 @@ export function createApp(db: AppDatabase): Express {
   const users = new UserRepository(db);
   const students = new StudentRepository(db);
   const tokens = new TokenRepository(db);
-  const authService = new AuthService(users, tokens, students);
+  const refreshTokens = new RefreshTokenRepository(db);
+  const authService = new AuthService(users, tokens, students, refreshTokens);
 
 const app = express();
 

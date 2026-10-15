@@ -20,7 +20,9 @@ export function createAuthRouter(
     "/login",
     controller.login,
   );
-
+  
+  router.post("/refresh", controller.refresh);
+  
   router.post(
     "/logout",
     requireAuth(authService),
