@@ -45,7 +45,7 @@ export const openapiSpec = {
       LoginResponse: {
         type: "object",
         properties: {
-          token: { type: "string", example: "eyJhbGciOiJIUzI1NiIsInR5cCI6..." },
+          accessToken: { type: "string", example: "eyJhbGciOiJIUzI1NiIsInR5cCI6..." },
           refreshToken: { type: "string", example: "eyJhbGciOiJIUzI1NiIsInR5cCI6..." },
           user: { $ref: "#/components/schemas/PublicUser" },
         },
@@ -60,7 +60,7 @@ export const openapiSpec = {
       RefreshTokenResponse: {
         type: "object",
         properties: {
-          token: { type: "string", example: "eyJhbGciOiJIUzI1NiIsInR5cCI6..." },
+          accessToken: { type: "string", example: "eyJhbGciOiJIUzI1NiIsInR5cCI6..." },
           refreshToken: { type: "string", example: "eyJhbGciOiJIUzI1NiIsInR5cCI6..." },
         },
       },
@@ -240,7 +240,7 @@ export const openapiSpec = {
               "application/json": {
                 schema: {
                   type: "object",
-                  properties: { user: { $ref: "#/components/schemas/PublicUser" } },
+                  properties: { data: { $ref: "#/components/schemas/PublicUser" } },
                 },
               },
             },

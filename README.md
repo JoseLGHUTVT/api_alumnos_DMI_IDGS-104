@@ -46,7 +46,7 @@ y nunca se devuelve en las respuestas).
 |--------|------|-----------|-------------|
 | GET | `/health` | No | Estado del servicio |
 | POST | `/api/auth/register` | No | Registrar usuario (`email`, `password`) |
-| POST | `/api/auth/login` | No | Iniciar sesión → devuelve `token` |
+| POST | `/api/auth/login` | No | Iniciar sesión → devuelve `accessToken` |
 | POST | `/api/auth/logout` | Sí | Cerrar sesión (revoca el token actual) |
 | GET | `/api/students` | Sí | Listar estudiantes |
 | GET | `/api/students/:id` | Sí | Obtener un estudiante |
